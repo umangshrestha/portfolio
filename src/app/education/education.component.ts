@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ResumeService } from '../service/resume.service';
 import { Education } from './education.entity';
 
 @Component({
@@ -7,5 +8,12 @@ import { Education } from './education.entity';
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent {
-  @Input() educations!: Education[];
+  educations!: Education[];
+
+  constructor(private resume: ResumeService) { }
+
+  ngOnInit(): void {
+    this.resume.getEducations().subscribe((education: any) => { this.educations = education; });
+  }
+
 }

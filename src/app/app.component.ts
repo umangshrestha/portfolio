@@ -14,23 +14,6 @@ export class AppComponent {
   @ViewChild(MatSidenav, { static: true })
   sidenav!: MatSidenav;
 
-
-  educations = [
-    {
-      id: 4,
-      institute: "University of Windsor",
-      program: "Master in Engineering (Co-op)",
-      degree: "Electrical and Computer Engineering",
-      year: 2023
-    }, {
-      id: 3,
-      institute: "Rajiv Gandhi Insitiute of Technology",
-      program: "Bachelor in Engineering",
-      degree: "Biomedical Engineering",
-      year: 2018
-    },
-  ]
-
   constructor(
     private titleService: Title,
     private observer: BreakpointObserver,
