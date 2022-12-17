@@ -21,16 +21,24 @@
         <mat-icon matListItemIcon>person</mat-icon>
         <span matListItemTitle>About</span>
       </mat-list-item>
+      <mat-list-item (click)="scroll(education)">
+        <mat-icon fontSet="fa" fontIcon="fa-briefcase" matListItemIcon></mat-icon> 
+        <span matListItemTitle>Education</span>
+      </mat-list-item>
       <mat-list-item (click)="scroll(skills)">
         <mat-icon matListItemIcon>build</mat-icon>
         <span matListItemTitle>Skills</span>
+      </mat-list-item>
+      <mat-list-item (click)="scroll(education)">
+        <mat-icon fontSet="fa" fontIcon="fa-graduation-cap" matListItemIcon></mat-icon> 
+        <span matListItemTitle>Education</span>
       </mat-list-item>
       <mat-list-item (click)="scroll(projects)">
         <mat-icon matListItemIcon>work</mat-icon>
         <span matListItemTitle>Projects</span>
       </mat-list-item>
       <mat-list-item (click)="scroll(contact)">
-        <mat-icon matListItemIcon>contact_mail</mat-icon>
+        <mat-icon fontSet="fa" fontIcon="fa-phone" matListItemIcon></mat-icon> 
         <span matListItemTitle>Contact</span>
       </mat-list-item>
     </mat-nav-list>
@@ -43,16 +51,22 @@
     <section #about class="mat-elevation-z8">
       <h1>About</h1>
     </section>
+    <section #experience class="mat-elevation-z8">
+      <h1>Experience</h1>
+    </section>
     <section #skills class="mat-elevation-z8">
       <h1>Skills</h1>
+    </section>
+    <section #education class="mat-elevation-z8">
+      <h1>Contact</h1>
     </section>
     <section #projects class="mat-elevation-z8">
       <h1>Projects</h1>
     </section>
     <section #contact class="mat-elevation-z8">
-      <h1>Contact</h1>
+      <app-education></app-education>
     </section>
-
+   
     <footer>
       <a mat-button disabled>
         <mat-icon>copyright</mat-icon> 2022, <em>Umang Shrestha</em>
@@ -60,3 +74,4 @@
     </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
