@@ -21,9 +21,9 @@
         <mat-icon matListItemIcon>person</mat-icon>
         <span matListItemTitle>About</span>
       </mat-list-item>
-      <mat-list-item (click)="scroll(education)">
+      <mat-list-item (click)="scroll(about)">
         <mat-icon fontSet="fa" fontIcon="fa-briefcase" matListItemIcon></mat-icon> 
-        <span matListItemTitle>Education</span>
+        <span matListItemTitle>Experience</span>
       </mat-list-item>
       <mat-list-item (click)="scroll(skills)">
         <mat-icon matListItemIcon>build</mat-icon>
@@ -45,6 +45,9 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
+    <section  #education  class="mat-elevation-z8">
+      <app-education [educations]="educations"></app-education>
+    </section>
     <section #home class="mat-elevation-z8">
       <h1>Home</h1>
     </section>
@@ -57,15 +60,13 @@
     <section #skills class="mat-elevation-z8">
       <h1>Skills</h1>
     </section>
-    <section #education class="mat-elevation-z8">
+    <section #contact class="mat-elevation-z8">
       <h1>Contact</h1>
     </section>
     <section #projects class="mat-elevation-z8">
       <h1>Projects</h1>
     </section>
-    <section #contact class="mat-elevation-z8">
-      <app-education></app-education>
-    </section>
+
    
     <footer>
       <a mat-button disabled>

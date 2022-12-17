@@ -73,15 +73,16 @@ mat-sidenav-content {
 }
 
 section {
-    height: 80vh;
+    max-height: 80vh;
+    min-height: fit-content;
     border-radius: 10px;
     margin: 5px 5px;
     padding: 32px;
-
-    font-size: 2rem;
-    color: lightgray;
-
     animation: ZoomOut 0.5s ease-in-out;
+
+    .title {
+        color: lightgray;
+    }
 }
 
 footer {

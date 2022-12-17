@@ -1,16 +1,15 @@
-<section>
-    <h1>Education</h1>
-    <mat-card>
+<h1>Education</h1>
+<div class="grid-layout">
+    <mat-card *ngFor="let education of educations">
         <mat-card-header>
-            <mat-card-title>
-                <h3>Master of Science in Computer Science</h3>
-            </mat-card-title>
-            <mat-card-subtitle>
-                <h4>University of Texas at Arlington</h4>
-            </mat-card-subtitle>
+            <mat-card-title-group>
+                <mat-card-subtitle>{{education.program}}</mat-card-subtitle>
+                <mat-card-title>{{education.degree}}</mat-card-title>
+            </mat-card-title-group>
         </mat-card-header>
         <mat-card-content>
-            <p>Graduated in May 2019</p>
+            {{education.institute}}
+            ({{education.year}})
         </mat-card-content>
     </mat-card>
-</section>
+</div>
