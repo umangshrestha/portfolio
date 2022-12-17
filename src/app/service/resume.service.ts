@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Education } from '../education/education.entity';
 import { map } from 'rxjs';
+import { Address } from '../contact/contact.entity';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,9 @@ export class ResumeService {
       .pipe(
         map((event: Education[]) => event.sort((a, b) => b.year - a.year))
       )
+  }
+
+  getAddress() {
+    return this.http.get<Address>(ResumeService.URL + 'location');
   }
 }

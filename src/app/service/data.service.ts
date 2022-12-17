@@ -23,9 +23,16 @@ export class DataService implements InMemoryDbService {
   ];
 
 
+  location = {
+    latitute: 42.2142839,
+    longitute: -83.013745,
+    address: "511 Pelissier StWindsor, ON N9A 4L2"
+  }
+
   createDb() {
     return {
-      education: this.education
+      education: this.education,
+      location: this.location
     }
   }
 

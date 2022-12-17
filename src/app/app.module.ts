@@ -9,11 +9,16 @@ import { EducationComponent } from './education/education.component';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DataService } from './service/data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PersonalDetailsComponent } from './personal-details/personal-details.component';
+import {GoogleMapsModule} from '@angular/google-maps';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EducationComponent,
+    PersonalDetailsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    GoogleMapsModule,
     InMemoryWebApiModule.forRoot(DataService)
   ],
   providers: [],
