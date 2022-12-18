@@ -5,10 +5,29 @@
         <mat-card-subtitle>Software Developer</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="/assets/img_avatar.png" alt="Photo of a Umang Shrestha">
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      
+    </mat-card-content>
+
+    <mat-divider></mat-divider>
 
     <mat-card-actions>
-        <button mat-button>
+        <a mat-button href="https://github.com/umangshrestha/" target="_blank">
+            <fa-icon [icon]="['fab', 'github']"></fa-icon>
+        </a>
+        <a mat-button href="https://www.linkedin.com/in/umangshrestha/" target="_blank">
+            <fa-icon style="color:#0072b1" [icon]="['fab', 'linkedin']"></fa-icon>
+        </a>
+        <a mat-button href="https://medium.com/@umangshrestha09/" target="_blank">
+            <fa-icon [icon]="['fab', 'medium']"></fa-icon>
+        </a>
+    </mat-card-actions>
+    <mat-card-actions>
+        <button mat-raised-button color="primary">
+            <span>Download Resume</span>
+            <mat-icon>download</mat-icon>
         </button>
-        <button mat-button>SHARE</button>
     </mat-card-actions>
 </mat-card>
+

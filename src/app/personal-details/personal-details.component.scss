@@ -1,3 +1,14 @@
 mat-card {
     max-width: 400px;
 }
+
+fa-icon {
+    font-size:24px; //or desired size
+}
+
+
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-around;
+}

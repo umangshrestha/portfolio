@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 import {GoogleMapsModule} from '@angular/google-maps';
 import { ContactComponent } from './contact/contact.component';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { faGithub, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons';
+import { faBriefcase, faEnvelope, faGraduationCap, faHome, faPerson, faProjectDiagram, faTools, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -27,9 +30,25 @@ import { ContactComponent } from './contact/contact.component';
     MaterialModule,
     HttpClientModule,
     GoogleMapsModule,
+    FontAwesomeModule,
     InMemoryWebApiModule.forRoot(DataService)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(library: FaIconLibrary) {
+    library.addIcons(
+      faGithub, 
+      faLinkedin, 
+      faMedium,
+      faBriefcase, 
+      faGraduationCap,
+      faHome,
+      faUser,
+      faTools,
+      faProjectDiagram,
+      faEnvelope);
+  }
+}

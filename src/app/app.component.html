@@ -14,31 +14,31 @@
   <mat-sidenav #sidenav opened class="mat-elevation-z8">
     <mat-nav-list>
       <mat-list-item (click)="scroll(home)"routerLinkActive="active">
-        <mat-icon matListItemIcon>home</mat-icon>
+        <fa-icon icon="home" matListItemIcon></fa-icon>
         <span matListItemTitle>Home</span>
       </mat-list-item>
-      <mat-list-item (click)="scroll(about)">
-        <mat-icon matListItemIcon>person</mat-icon>
-        <span matListItemTitle>About</span>
+      <mat-list-item (click)="scroll(personalDetails)">
+        <fa-icon icon="user" matListItemIcon></fa-icon>
+        <span matListItemTitle>Personal Details</span>
       </mat-list-item>
-      <mat-list-item (click)="scroll(about)">
-        <mat-icon fontSet="fa" fontIcon="fa-briefcase" matListItemIcon></mat-icon> 
+      <mat-list-item (click)="scroll(experience)">
+        <fa-icon icon="briefcase" matListItemIcon></fa-icon>
         <span matListItemTitle>Experience</span>
       </mat-list-item>
       <mat-list-item (click)="scroll(skills)">
-        <mat-icon matListItemIcon>build</mat-icon>
+        <fa-icon icon="tools" matListItemIcon></fa-icon>
         <span matListItemTitle>Skills</span>
       </mat-list-item>
       <mat-list-item (click)="scroll(education)">
-        <mat-icon fontSet="fa" fontIcon="fa-graduation-cap" matListItemIcon></mat-icon> 
+        <fa-icon icon="graduation-cap" matListItemIcon></fa-icon>
         <span matListItemTitle>Education</span>
       </mat-list-item>
       <mat-list-item (click)="scroll(projects)">
-        <mat-icon matListItemIcon>work</mat-icon>
+        <fa-icon icon="project-diagram" matListItemIcon></fa-icon>
         <span matListItemTitle>Projects</span>
       </mat-list-item>
       <mat-list-item (click)="scroll(contact)">
-        <mat-icon fontSet="fa" fontIcon="fa-phone" matListItemIcon></mat-icon> 
+        <fa-icon icon="envelope" matListItemIcon></fa-icon>
         <span matListItemTitle>Contact</span>
       </mat-list-item>
     </mat-nav-list>
@@ -51,8 +51,8 @@
     <section #home class="mat-elevation-z8">
       <h1>Home</h1>
     </section>
-    <section #about class="mat-elevation-z8">
-      <h1>About</h1>
+    <section #personalDetails class="mat-elevation-z8">
+      <app-personal-details></app-personal-details>
     </section>
     <section #experience class="mat-elevation-z8">
       <h1>Experience</h1>
