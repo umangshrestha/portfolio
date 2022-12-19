@@ -5,13 +5,6 @@
         <mat-card-subtitle>Software Developer</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="/assets/img_avatar.png" alt="Photo of a Umang Shrestha">
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      
-    </mat-card-content>
-
-    <mat-divider></mat-divider>
-
     <mat-card-actions>
         <a mat-button href="https://github.com/umangshrestha/" target="_blank">
             <fa-icon [icon]="['fab', 'github']"></fa-icon>
@@ -22,12 +15,20 @@
         <a mat-button href="https://medium.com/@umangshrestha09/" target="_blank">
             <fa-icon [icon]="['fab', 'medium']"></fa-icon>
         </a>
+        <a mat-button href="mailto:umangshrestha09@gmail.com" target="_blank">
+            <fa-icon [icon]="'envelope'"></fa-icon>
+        </a>
     </mat-card-actions>
-    <mat-card-actions>
-        <button mat-raised-button color="primary">
-            <span>Download Resume</span>
-            <mat-icon>download</mat-icon>
-        </button>
-    </mat-card-actions>
+    <button mat-raised-button color="primary">
+        <span>Download Resume</span>
+        <mat-icon>download</mat-icon>
+    </button>
+    <mat-card-header>
+        <mat-card-title>About Me</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>  
+        <p>
+            I am a software developer with 2 years of experience in developing, maintaining and automating software solutions using various programming languagers like Python, Node JS and Golang. I am a quick learner and I am always eager to learn new technologies. I am a team player and I am always ready to help my team members.
+        </p>
+    </mat-card-content>
 </mat-card>
-

@@ -15,13 +15,15 @@ import { ContactComponent } from './contact/contact.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { faGithub, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { faBriefcase, faEnvelope, faGraduationCap, faHome, faPerson, faProjectDiagram, faTools, faUser } from '@fortawesome/free-solid-svg-icons';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EducationComponent,
     PersonalDetailsComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

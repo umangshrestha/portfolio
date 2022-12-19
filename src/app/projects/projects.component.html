@@ -1,0 +1,18 @@
+<div class="project-list">
+    <mat-card class="project" *ngFor="let project of projects">
+        <mat-card-header>
+            <mat-card-title>{{project.name| uppercase}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{project.github}}" alt="Photo of a {{project.name}}">
+
+        <mat-card-actions>
+            <a mat-button routerLink="{{project.github}}">Github</a>
+            <a mat-button color="accent" [disabled]="!project.demoUrl">Demo</a>
+        </mat-card-actions>
+        <mat-card-content>
+            <span class="tags" *ngFor="let tags of project.tags">
+                {{tags| lowercase}}
+            </span>
+        </mat-card-content>
+    </mat-card>
+</div>

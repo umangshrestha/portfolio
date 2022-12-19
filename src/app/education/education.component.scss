@@ -6,8 +6,9 @@
     cursor: pointer;
     border: none;
 
+    mat-card {
+        width: 400px;
+    }
+
 }
 
-mat-card {
-    width: 400px;
-}
