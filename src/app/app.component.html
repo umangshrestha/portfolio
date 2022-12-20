@@ -13,7 +13,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav opened class="mat-elevation-z8">
     <mat-nav-list>
-      <mat-list-item (click)="scroll(home)"routerLinkActive="active">
+      <mat-list-item (click)="scroll(home)" routerLinkActive="active">
         <fa-icon icon="home" matListItemIcon></fa-icon>
         <span matListItemTitle>Home</span>
       </mat-list-item>
@@ -51,7 +51,7 @@
     <section #projects class="mat-elevation-z8">
       <app-projects></app-projects>
     </section>
-    <section  #education  class="mat-elevation-z8">
+    <section #education class="mat-elevation-z8">
       <app-education></app-education>
     </section>
     <section #home class="mat-elevation-z8">
@@ -69,7 +69,7 @@
     </section>
 
 
-   
+
     <footer>
       <a mat-button disabled>
         <mat-icon>copyright</mat-icon> 2022, <em>Umang Shrestha</em>
@@ -77,4 +77,3 @@
     </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
-

@@ -1,8 +1,8 @@
 <h1>Personal Details</h1>
 <mat-card *ngIf="personalDetails">
     <mat-card-header>
-        <mat-card-title>{{personalDetails.name}}</mat-card-title>
-        <mat-card-subtitle>{{personalDetails.designation}}</mat-card-subtitle>
+        <mat-card-title >{{personalDetails.name}}</mat-card-title>
+        <mat-card-subtitle> {{personalDetails.designation}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="{{personalDetails.image}}" alt="Photo of a {{personalDetails.name}}">
     <mat-card-actions>
@@ -10,7 +10,7 @@
             <fa-icon style="color:green" [icon]="phone"></fa-icon>
         </a>
         <a mat-button href="mailto:{{personalDetails.email}}" matTooltip="{{personalDetails.email}}" target="_blank">
-            <fa-icon  icon="envelope"></fa-icon>
+            <fa-icon icon="envelope"></fa-icon>
         </a>
         <a mat-button href="{{personalDetails.github}}" matTooltip="{{personalDetails.github}}" target="_blank">
             <fa-icon [icon]="['fab', 'github']"></fa-icon>
