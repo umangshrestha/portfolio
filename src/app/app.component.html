@@ -45,15 +45,19 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
+    <section #personalDetails class="mat-elevation-z8">
+      <app-personal-details></app-personal-details>
+    </section>
+    <section #projects class="mat-elevation-z8">
+      <app-projects></app-projects>
+    </section>
     <section  #education  class="mat-elevation-z8">
       <app-education></app-education>
     </section>
     <section #home class="mat-elevation-z8">
       <h1>Home</h1>
     </section>
-    <section #personalDetails class="mat-elevation-z8">
-      <app-personal-details></app-personal-details>
-    </section>
+
     <section #experience class="mat-elevation-z8">
       <h1>Experience</h1>
     </section>
@@ -63,10 +67,7 @@
     <section #contact class="mat-elevation-z8">
       <app-contact></app-contact>
     </section>
-    <section #projects class="mat-elevation-z8">
-      <h1>Projects</h1>
-      <app-projects></app-projects>
-    </section>
+
 
    
     <footer>

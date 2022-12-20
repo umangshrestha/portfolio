@@ -1,4 +1,4 @@
-export interface  Education {
+export interface Education {
     id: number;
     institute: string;
     program: string;

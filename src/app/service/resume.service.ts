@@ -4,6 +4,7 @@ import { Education } from '../education/education.entity';
 import { map } from 'rxjs';
 import { Address } from '../contact/contact.entity';
 import { Project } from '../projects/projects.entity';
+import { PersonalDetails } from '../personal-details/personal-details.entity';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,9 @@ export class ResumeService {
 
   getProjects() {
     return this.http.get<Project[]>(ResumeService.URL + '/projects');
+  }
+
+  getPersonalDetails() {
+    return this.http.get<PersonalDetails>(ResumeService.URL + '/personalDetails');
   }
 }
