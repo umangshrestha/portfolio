@@ -1,17 +1,17 @@
-.tags {
+.tags-container {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    margin: 0 5px;
 
     span {
         display: inline;
         margin: 5px;
         padding: 5px;
-   
+        height: 20px;
         text-transform: lowercase;
         border-radius: 5px;
-        background-color: #e0e0e0;
+        background-color: #ddd;
     }
 }
 
@@ -32,4 +32,9 @@
     img {
         max-height: 300px;
     }
+}
+
+
+.spacer {
+    flex: 1 1 auto;
 }

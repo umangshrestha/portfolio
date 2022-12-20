@@ -8,6 +8,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRippleModule } from '@angular/material/core';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [],
@@ -19,7 +22,10 @@ import { MatRippleModule } from '@angular/material/core';
     MatListModule,
     MatCardModule,
     MatTooltipModule,
-    MatRippleModule
+    MatRippleModule,
+    ClipboardModule,
+    MatExpansionModule,
+    MatSnackBarModule,
   ]
 })
 export class MaterialModule { }

@@ -29,7 +29,6 @@ export class DataService implements InMemoryDbService {
   location = {
     latitute: 42.2142839,
     longitute: -83.013745,
-    address: "511 Pelissier StWindsor, ON N9A 4L2"
   }
 
   personalDetails: PersonalDetails = {
@@ -42,7 +41,8 @@ export class DataService implements InMemoryDbService {
     github: "https://github.com/umangshrestha/",
     linkedin: "https://www.linkedin.com/in/umangshrestha/",
     medium: "https://umangshrestha09.medium.com/",
-    description: "I am a software developer with 2 years of experience in developing, maintaining and automating software solutions using various programming languagers like Python, Node JS and Golang. I am a quick learner and I am always eager to learn new technologies. I am a team player and I am always ready to help my team members."
+    description: "I am a software developer with 2 years of experience in developing, maintaining and automating software solutions using various programming languagers like Python, Node JS and Golang. I am a quick learner and I am always eager to learn new technologies. I am a team player and I am always ready to help my team members.",
+    address: "511 Pelissier StWindsor, ON N9A 4L2"
   }
 
   projects: Project[] = [
@@ -50,14 +50,14 @@ export class DataService implements InMemoryDbService {
       id: 1,
       name: "Custom Interpreter",
       description: "This is a OOPS based programming language interpreter written in Rust. It is a recursive descent parser with a lexer. It supports basic arithmetic operations, variable declaration, assignment, if-else, while loops, functions, and recursion.",
-      tags: ["Rust", "Recursive Parser", "Lexer"],
+      tags: ["Rust", "Recursive Parser", "Lexer", "Token"],
       image: "/assets/projects/programming.png",
       github: "https://github.com/umangshrestha/yet-another-interpreter-in-rust",
     }, {
       id: 2,
       name: "System Montioring",
       description: "This is a linux based system monitoring tool written in Golang that uses proc files to monitor the CPU, Memory, and Network usage of the system.",
-      tags: ["Golang", "Linux"],
+      tags: ["Golang", "Linux", "Proc files", "CPU", "mem"],
       image: "/assets/projects/system-monitoring.png",
       github: "https://github.com/umangshrestha/system-monitoring",
     }, {
@@ -72,7 +72,7 @@ export class DataService implements InMemoryDbService {
       id: 4,
       name: "Flow App",
       description: "This app tracks the information on client and their queries",
-      tags: ["NestJS", "Typescript", "Jest", "PostgreSQL", "Docker", "Github Actions", "Docker", "Swagger", "Rest API", "Docker Compose"],
+      tags: ["NestJS", "Typescript", "PostgreSQL", "Docker", "Github Actions", "Docker", "Swagger", "Rest API"],
       github: "https://github.com/umangshrestha/flow-app",
       image: "/assets/projects/swagger-ui.png",
       demoUrl: "https://nestflowapp.herokuapp.com/"

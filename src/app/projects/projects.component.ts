@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DataService } from '../service/data.service';
 import { ResumeService } from '../service/resume.service';
 import { Project } from './projects.entity';
 

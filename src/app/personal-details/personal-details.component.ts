@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
 import { ResumeService } from '../service/resume.service';
 import { PersonalDetails } from './personal-details.entity';
@@ -10,9 +11,11 @@ import { PersonalDetails } from './personal-details.entity';
 })
 export class PersonalDetailsComponent {
   personalDetails!: PersonalDetails;
+  phone = faPhoneFlip;
 
-  phone = faPhoneFlip
-  constructor(private resumeService: ResumeService) {}
+  constructor(
+    private resumeService: ResumeService,
+    private snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     this.resumeService.getPersonalDetails().subscribe((personalDetails: PersonalDetails) => {
@@ -20,4 +23,8 @@ export class PersonalDetailsComponent {
     });
   }
 
+
+  onCopy(value: string) {
+    this.snackBar.open(`Copied: ${value}`, "X");
+  }
 }

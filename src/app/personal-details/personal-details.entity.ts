@@ -3,10 +3,11 @@ export interface PersonalDetails {
     name: string;
     image: string;
     designation: string;
-    email?: string;
-    phone?: string;
+    email: string;
+    phone: string;
     github?: string;
     linkedin?: string;
     medium?: string;
+    address: string;
     description: string;
 }

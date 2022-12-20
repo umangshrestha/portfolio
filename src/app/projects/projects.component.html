@@ -1,21 +1,28 @@
 <h1>Projects</h1>
 <div class="project-list">
     <mat-card class="project" matRipple *ngFor="let project of projects">
-        <mat-card-header>
-            <mat-card-title>{{project.name| uppercase}}</mat-card-title>
-        </mat-card-header>
-        <mat-card-actions>
+        <mat-expansion-panel class="mat-elevation-z0">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{project.name| uppercase}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-card-content>
+                <p>{{project.description}}</p>
+            </mat-card-content>
+
+        </mat-expansion-panel>
+
+        <div class="tags-container">
+            <span *ngFor="let tags of project.tags">
+                {{tags}}
+            </span>
+        </div>
+        <span class="spacer"></span>
+
+        <mat-card-footer>
             <a mat-button href="{{project.github}}">Github</a>
             <a mat-button href="{{project.demoUrl}}" color="accent" [disabled]="!project.demoUrl">Demo</a>
-        </mat-card-actions>
-        <mat-card-actions>
-            <div class="tags">
-                <span *ngFor="let tags of project.tags">{{tags}}</span>
-            </div>
-        </mat-card-actions>
-        <mat-card-content>
-            <p>{{project.description}}</p>
-        </mat-card-content>
-
+        </mat-card-footer>
     </mat-card>
 </div>
