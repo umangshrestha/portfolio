@@ -1,53 +1,69 @@
-<div class="outer">
+<div class="container">
+<div class="outer" *ngIf="personalDetails">
     <mat-card>
-        <mat-card-header>
-            <mat-card-title>{{personalDetails.name}}</mat-card-title>
-            <mat-card-subtitle> {{personalDetails.designation}}</mat-card-subtitle>
-        </mat-card-header>
-       
         <img mat-card-image src="{{personalDetails.image}}" alt="Photo of a {{personalDetails.name}}">
         <mat-card-actions>
-    
-            <a mat-icon-button href="{{personalDetails.github}}" matTooltip="{{personalDetails.github}}" target="_blank">
+
+            <a mat-icon-button href="{{personalDetails.github}}" matTooltip="{{personalDetails.github}}"
+                target="_blank">
                 <fa-icon [icon]="['fab', 'github']"></fa-icon>
             </a>
-            <a mat-icon-button href="{{personalDetails.linkedin}}" matTooltip="{{personalDetails.linkedin}}" target="_blank">
+            <a mat-icon-button href="{{personalDetails.linkedin}}" matTooltip="{{personalDetails.linkedin}}"
+                target="_blank">
                 <fa-icon style="color:#0072b1" [icon]="['fab', 'linkedin']"></fa-icon>
             </a>
-            <a mat-icon-button href="{{personalDetails.medium}}" matTooltip="{{personalDetails.medium}}" target="_blank">
+            <a mat-icon-button href="{{personalDetails.medium}}" matTooltip="{{personalDetails.medium}}"
+                target="_blank">
                 <fa-icon [icon]="['fab', 'medium']"></fa-icon>
             </a>
         </mat-card-actions>
     </mat-card>
     <mat-card>
-       <mat-expansion-panel expanded>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    About me
-                </mat-panel-title>
-            </mat-expansion-panel-header>
+        <mat-card-header>
+            <mat-card-title>{{personalDetails.name}}</mat-card-title>
+            <mat-card-subtitle> {{personalDetails.designation}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-header>
+            <mat-card-title> About me </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
             <p>{{personalDetails.description}}</p>
-        </mat-expansion-panel>
-        <mat-expansion-panel expanded>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Personal Details
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-list-item>
-                <fa-icon style="color:green" [icon]="phone"></fa-icon>
-                <span>{{personalDetails.phone}}</span>
-                <button mat-icon-button [cdkCopyToClipboard]="personalDetails.phone" (click)="onCopy('Phone number')">
-                    <mat-icon>file_copy</mat-icon>
-                </button>
-            </mat-list-item>
-            <mat-list-item>
-                <fa-icon style="color:#F93154" icon="envelope"></fa-icon>
-                <span>{{personalDetails.email}}</span>
-                <button mat-icon-button [cdkCopyToClipboard]="personalDetails.email" (click)="onCopy('Email')">
-                    <mat-icon>file_copy</mat-icon>
-                </button>
-            </mat-list-item>
-        </mat-expansion-panel>
+        </mat-card-content>
+
+        <mat-card-header>
+            <mat-card-title> Personal Details </mat-card-title>
+        </mat-card-header>
+
+
+        <mat-card-content>
+            <table >
+                <tr>
+                    <td>
+                        <fa-icon style="color:green" [icon]="phone"></fa-icon>
+                    </td>
+                    <td>
+                        {{personalDetails.phone}}
+                    </td>
+                    <td>
+                        <button mat-icon-button [cdkCopyToClipboard]="personalDetails.phone" (click)="onCopy('Phone number')">
+                            <mat-icon>file_copy</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fa-icon style="color:#F93154" icon="envelope"></fa-icon>
+                    </td>
+                    <td>{{personalDetails.email}}</td>
+                    <td>
+                        <button mat-icon-button [cdkCopyToClipboard]="personalDetails.email" (click)="onCopy('Email')">
+                            <mat-icon>file_copy</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </mat-card-content>
     </mat-card>
+</div>
 </div>

@@ -10,11 +10,9 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DataService } from './service/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
-import { GoogleMapsModule } from '@angular/google-maps';
-import { ContactComponent } from './contact/contact.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { faGithub, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons';
-import { faBriefcase, faEnvelope,faCopy, faGraduationCap, faHome, faLink, faPhoneFlip, faProjectDiagram, faTools, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faEnvelope, faCopy, faGraduationCap, faHome, faLink, faPhoneFlip, faProjectDiagram, faTools, faUser } from '@fortawesome/free-solid-svg-icons';
 import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
@@ -22,7 +20,6 @@ import { ProjectsComponent } from './projects/projects.component';
     AppComponent,
     EducationComponent,
     PersonalDetailsComponent,
-    ContactComponent,
     ProjectsComponent
   ],
   imports: [
@@ -31,7 +28,6 @@ import { ProjectsComponent } from './projects/projects.component';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    GoogleMapsModule,
     FontAwesomeModule,
     InMemoryWebApiModule.forRoot(DataService)
   ],

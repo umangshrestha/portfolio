@@ -10,7 +10,7 @@
   </button>
 </mat-toolbar>
 
-<mat-sidenav-container v>
+<mat-sidenav-container>
   <mat-sidenav #sidenav opened class="mat-elevation-z8">
     <mat-nav-list>
       <mat-list-item (click)="scroll(home)" routerLinkActive="active">
@@ -37,11 +37,8 @@
         <fa-icon icon="project-diagram" matListItemIcon></fa-icon>
         <span matListItemTitle>Projects</span>
       </mat-list-item>
-      <mat-list-item (click)="scroll(contact)">
-        <fa-icon icon="envelope" matListItemIcon></fa-icon>
-        <span matListItemTitle>Contact</span>
-      </mat-list-item>
     </mat-nav-list>
+  
   </mat-sidenav>
 
   <mat-sidenav-content class="mat-elevation-z8">
@@ -64,10 +61,7 @@
     <section #skills class="mat-elevation-z8">
       <h1>Skills</h1>
     </section>
-    <section #contact class="mat-elevation-z8">
-      <app-contact></app-contact>
-    </section>
-
+ 
     <footer>
       <a mat-button disabled>
         <mat-icon>copyright</mat-icon> 2022, <em>Umang Shrestha</em>

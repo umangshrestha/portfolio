@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Education } from '../education/education.entity';
 import { map } from 'rxjs';
-import { Address } from '../contact/contact.entity';
+// import { Address } from '../contact/contact.entity';
 import { Project } from '../projects/projects.entity';
 import { PersonalDetails } from '../personal-details/personal-details.entity';
 
@@ -21,9 +21,9 @@ export class ResumeService {
       )
   }
 
-  getAddress() {
-    return this.http.get<Address>(ResumeService.URL + '/location');
-  }
+  // getAddress() {
+  //   return this.http.get<Address>(ResumeService.URL + '/location');
+  // }
 
   getProjects() {
     return this.http.get<Project[]>(ResumeService.URL + '/projects');

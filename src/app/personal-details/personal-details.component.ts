@@ -18,6 +18,10 @@ export class PersonalDetailsComponent {
     private snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
+    this.getPersonalDetails();
+  }
+
+  getPersonalDetails() {
     this.resumeService.getPersonalDetails().subscribe((personalDetails: PersonalDetails) => {
       this.personalDetails = personalDetails;
     });
@@ -25,6 +29,8 @@ export class PersonalDetailsComponent {
 
 
   onCopy(value: string) {
-    this.snackBar.open(`Copied: ${value}`, "X");
+    this.snackBar.open(`Copied: ${value}`, "X", {
+      duration: 2000,
+    });
   }
 }

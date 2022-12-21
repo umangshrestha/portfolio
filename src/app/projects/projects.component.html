@@ -1,9 +1,10 @@
 <h1>Projects</h1>
-<div class="project-list">
-    <mat-card class="project mat-elevation-z8" matRipple *ngFor="let project of projects">
+<div class="project-list">  
+    <ng-container *ngFor="let project of projects">
+    <mat-card matRipple  class="project mat-elevation-z8">
         <mat-expansion-panel>
             <mat-expansion-panel-header>
-                <mat-panel-title> {{project.name| uppercase}}</mat-panel-title>
+                <mat-panel-title>{{project.name| uppercase}}</mat-panel-title>
             </mat-expansion-panel-header>
             <mat-card-content>{{project.description}}</mat-card-content>
 
@@ -20,4 +21,5 @@
             <a mat-button href="{{project.demoUrl}}" color="accent" [disabled]="!project.demoUrl">Demo</a>
         </mat-card-footer>
     </mat-card>
+    </ng-container>
 </div>
