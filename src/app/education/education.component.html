@@ -1,7 +1,7 @@
 <h1>Education</h1>
-<div class="grid-layout">
-    <mat-card  matRipple *ngFor="let education of educations">
-        <mat-card-header>
+<div class="container">
+    <mat-card matRipple *ngFor="let education of educations">
+        <mat-card-header >
             <mat-card-title-group>
                 <mat-card-subtitle>{{education.program}}</mat-card-subtitle>
                 <mat-card-title>{{education.degree}}</mat-card-title>

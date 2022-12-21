@@ -10,7 +10,7 @@
   </button>
 </mat-toolbar>
 
-<mat-sidenav-container>
+<mat-sidenav-container v>
   <mat-sidenav #sidenav opened class="mat-elevation-z8">
     <mat-nav-list>
       <mat-list-item (click)="scroll(home)" routerLinkActive="active">
@@ -44,8 +44,8 @@
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content>
-    <section #personalDetails class="mat-elevation-z8">
+  <mat-sidenav-content class="mat-elevation-z8">
+    <section #personalDetails class="mat-elevation-z8" >
       <app-personal-details></app-personal-details>
     </section>
     <section #projects class="mat-elevation-z8">
