@@ -72,7 +72,7 @@ export class DataService implements InMemoryDbService {
       id: 4,
       name: "Flow App",
       description: "This app tracks the information on client and their queries",
-      tags: ["NestJS", "Typescript", "PostgreSQL", "Docker", "Github Actions", "Docker", "Swagger", "Rest API"],
+      tags: ["NestJS", "Typescript", "PostgreSQL", "Docker", "Github Actions", "Swagger", "Rest API"],
       github: "https://github.com/umangshrestha/flow-app",
       image: "/assets/projects/swagger-ui.png",
       demoUrl: "https://nestflowapp.herokuapp.com/"

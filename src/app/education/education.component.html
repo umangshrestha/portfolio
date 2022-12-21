@@ -1,15 +1,17 @@
 <h1>Education</h1>
 <div class="container">
-    <mat-card matRipple *ngFor="let education of educations">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-subtitle>{{education.program}}</mat-card-subtitle>
-                <mat-card-title>{{education.degree}}</mat-card-title>
-            </mat-card-title-group>
-        </mat-card-header>
-        <mat-card-content>
-            {{education.institute}}
-            ({{education.year}})
-        </mat-card-content>
-    </mat-card>
+    <ng-container *ngFor="let education of educations">
+        <mat-card matRipple>
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-subtitle>{{education.program}}</mat-card-subtitle>
+                    <mat-card-title>{{education.degree}}</mat-card-title>
+                </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+                {{education.institute}}
+                ({{education.year}})
+            </mat-card-content>
+        </mat-card>
+    </ng-container>
 </div>

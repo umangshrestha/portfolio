@@ -38,31 +38,32 @@
         <span matListItemTitle>Projects</span>
       </mat-list-item>
     </mat-nav-list>
-  
+
   </mat-sidenav>
 
-  <mat-sidenav-content class="mat-elevation-z8">
-    <section #personalDetails class="mat-elevation-z8" >
-      <app-personal-details></app-personal-details>
-    </section>
-    <section #projects class="mat-elevation-z8">
-      <app-projects></app-projects>
-    </section>
-    <section #education class="mat-elevation-z8">
-      <app-education></app-education>
-    </section>
-    <section #home class="mat-elevation-z8">
-      <h1>Home</h1>
-    </section>
+  <mat-sidenav-content >
+    <main class="mat-elevation-z8">
+      <section #personalDetails>
+        <app-personal-details></app-personal-details>
+      </section>
+      <section #projects>
+        <app-projects></app-projects>
+      </section>
+      <section #education>
+        <app-education></app-education>
+      </section>
+      <section #home>
+        <h1>Home</h1>
+      </section>
 
-    <section #experience class="mat-elevation-z8">
-      <h1>Experience</h1>
-    </section>
-    <section #skills class="mat-elevation-z8">
-      <h1>Skills</h1>
-    </section>
- 
-    <footer>
+      <section #experience>
+        <h1>Experience</h1>
+      </section>
+      <section #skills>
+        <h1>Skills</h1>
+      </section>
+    </main>
+    <footer class="mat-elevation-z8">
       <a mat-button disabled>
         <mat-icon>copyright</mat-icon> 2022, <em>Umang Shrestha</em>
       </a>
