@@ -10,7 +10,7 @@ import { PersonalDetails } from './personal-details.entity';
   styleUrls: ['./personal-details.component.scss']
 })
 export class PersonalDetailsComponent {
-  personalDetails!: PersonalDetails;
+  detail!: PersonalDetails;
   phone = faPhoneFlip;
 
   constructor(
@@ -23,7 +23,7 @@ export class PersonalDetailsComponent {
 
   getPersonalDetails() {
     this.resumeService.getPersonalDetails().subscribe((personalDetails: PersonalDetails) => {
-      this.personalDetails = personalDetails;
+      this.detail = personalDetails;
     });
   }
 

@@ -1,76 +1,56 @@
 <div class="container">
-    <div class="outer mat-elevation-z8" *ngIf="personalDetails">
-        <mat-card>
-            <img mat-card-image src="{{personalDetails.image}}" alt="Photo of a {{personalDetails.name}}">
+    <div class="outer mat-elevation-z8" *ngIf="detail">
+        <mat-card *ngIf="detail">
+            <img mat-card-image src="{{detail.image}}" alt="Photo of a {{detail.name}}">
             <mat-card-actions>
-                <a mat-icon-button href="{{personalDetails.github}}" matTooltip="{{personalDetails.github}}"
-                    target="_blank">
-                    <fa-icon [icon]="['fab', 'github']"></fa-icon>
-                </a>
-                <a mat-icon-button href="{{personalDetails.linkedin}}" matTooltip="{{personalDetails.linkedin}}"
-                    target="_blank">
-                    <fa-icon style="color:#0072b1" [icon]="['fab', 'linkedin']"></fa-icon>
-                </a>
-                <a mat-icon-button href="{{personalDetails.medium}}" matTooltip="{{personalDetails.medium}}"
-                    target="_blank">
-                    <fa-icon [icon]="['fab', 'medium']"></fa-icon>
-                </a>
+                <a-icon-btn href="{{detail.github}}" [icon]="['fab', 'github']"></a-icon-btn>
+                <a-icon-btn href="{{detail.linkedin}}" color="#0072b1" [icon]="['fab', 'linkedin']"></a-icon-btn>
+                <a-icon-btn href="{{detail.medium}}" [icon]="['fab', 'medium']"></a-icon-btn>
             </mat-card-actions>
         </mat-card>
+
         <mat-card>
             <mat-card-header>
-                <mat-card-title>{{personalDetails.name}}</mat-card-title>
-                <mat-card-subtitle> {{personalDetails.designation}}</mat-card-subtitle>
-            </mat-card-header>
-
-            <mat-card-header>
-                <mat-card-title> About me </mat-card-title>
+                <mat-card-title>{{detail.name}}</mat-card-title>
+                <mat-card-subtitle> {{detail.designation}}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
-                <p>{{personalDetails.description}}</p>
+                <mat-tab-group>
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <mat-icon>info</mat-icon>
+                            <span>About</span>
+                        </ng-template>
+                        <article>{{detail.description}}</article>
+                    </mat-tab>
+
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <mat-icon>phone</mat-icon>
+                            <span>Contact</span>
+                        </ng-template>
+                        <mat-list>
+                            <mat-list-item [cdkCopyToClipboard]="detail.phone" (click)="onCopy('Phone number')">
+                                <mat-icon matListItemIcon>phone</mat-icon>
+                                <span matListItemTitle>Phone</span>
+                                <span matListItemSubtitle>{{detail.phone}}</span>
+
+                            </mat-list-item>
+                            <mat-list-item [cdkCopyToClipboard]="detail.email" (click)="onCopy('Email')">
+                                <mat-icon matListItemIcon>email</mat-icon>
+                                <span matListItemTitle>Email</span>
+                                <span matListItemSubtitle>{{detail.email}}</span>
+                            </mat-list-item>
+                            <mat-list-item [cdkCopyToClipboard]="detail.email" (click)="onCopy('Addres')">
+                                <mat-icon matListItemIcon>location_on</mat-icon>
+                                <span matListItemTitle>Location</span>
+                                <span matListItemSubtitle>{{detail.address}}</span>
+                            </mat-list-item>
+                        </mat-list>
+                    </mat-tab>
+                </mat-tab-group>
             </mat-card-content>
 
-            <mat-card-header>
-                <mat-card-title> Personal Details </mat-card-title>
-            </mat-card-header>
-
-
-            <mat-card-content>
-                <table>
-                    <tr>
-                        <td>
-                            <a mat-icon-button href="tel:{{personalDetails.phone}}"
-                                matTooltip="{{personalDetails.phone}}">
-                                <fa-icon style="color:green" [icon]="phone"></fa-icon>
-                            </a>
-                        </td>
-                        <td>
-                            {{personalDetails.phone}}
-                        </td>
-                        <td>
-                            <button mat-icon-button [cdkCopyToClipboard]="personalDetails.phone"
-                                (click)="onCopy('Phone number')">
-                                <mat-icon>file_copy</mat-icon>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a mat-icon-button href="mailto:{{personalDetails.email}}"
-                                matTooltip="{{personalDetails.email}}">
-                                <fa-icon style="color:#F93154" icon="envelope"></fa-icon>
-                            </a>
-                        </td>
-                        <td>{{personalDetails.email}}</td>
-                        <td>
-                            <button mat-icon-button [cdkCopyToClipboard]="personalDetails.email"
-                                (click)="onCopy('Email')">
-                                <mat-icon>file_copy</mat-icon>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
-            </mat-card-content>
         </mat-card>
     </div>
 </div>

@@ -14,13 +14,15 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faGithub, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { faBriefcase, faEnvelope, faCopy, faGraduationCap, faHome, faLink, faPhoneFlip, faProjectDiagram, faTools, faUser } from '@fortawesome/free-solid-svg-icons';
 import { ProjectsComponent } from './projects/projects.component';
+import { AIconBtnComponent } from './personal-details/a-icon-btn/a-icon-btn.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EducationComponent,
     PersonalDetailsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    AIconBtnComponent,
   ],
   imports: [
     BrowserModule,

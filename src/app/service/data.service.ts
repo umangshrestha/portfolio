@@ -37,12 +37,12 @@ export class DataService implements InMemoryDbService {
     designation: "Software Developer",
     image: "/assets/img_avatar.png",
     email: "umangshrestha09@gmail.com",
-    phone: "+1 226-961-1358",
+    phone: "+1 (226)961-1358",
     github: "https://github.com/umangshrestha/",
     linkedin: "https://www.linkedin.com/in/umangshrestha/",
     medium: "https://umangshrestha09.medium.com/",
     description: "I am a software developer with 2 years of experience in developing, maintaining and automating software solutions using various programming languagers like Python, Node JS and Golang. I am a quick learner and I am always eager to learn new technologies. I am a team player and I am always ready to help my team members.",
-    address: "511 Pelissier StWindsor, ON N9A 4L2"
+    address: "511 Pelissier St, Windsor, ON N9A 4L2"
   }
 
   projects: Project[] = [
