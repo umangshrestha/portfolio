@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     width: 100%;
     padding: 0 20px;
-    max-width: 1200px;
     margin-top: 20px;
     margin-bottom: 20px;
     transition: all 0.3s ease-in-out;
@@ -14,7 +13,7 @@
         border-left: 8px solid #1976D2;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         margin: 10px;
-        width: 400px;
+        max-width: 1600px;
 
         &:hover {
             transform: scale(1.05);
