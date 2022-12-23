@@ -16,9 +16,10 @@ import { faBriefcase, faEnvelope, faCopy, faGraduationCap, faHome, faLink, faPho
 import { ProjectsComponent } from './projects/projects.component';
 import { AIconBtnComponent } from './personal-details/a-icon-btn/a-icon-btn.component';
 import { SkillsComponent } from './skills/skills.component';
-import { TagsComponent } from './tags/tags.component';
+import { TagsComponent } from './shared/tags/tags.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { DateToString } from './shared/date.pipe';
+import { DateToStringPipe } from './shared/pipe/date.pipe';
+import { JoinPipe } from './shared/pipe/join.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { DateToString } from './shared/date.pipe';
     ExperienceComponent,
     TagsComponent,
 
-    DateToString
+    DateToStringPipe,
+    JoinPipe,
+
   ],
   imports: [
     BrowserModule,

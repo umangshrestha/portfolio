@@ -18,10 +18,5 @@ ul {
         font-size: 1.2rem;
         font-weight: 500;
 
-        &::before {
-            content: "#";
-            margin-right: 10px;
-        }
-
     }
 }

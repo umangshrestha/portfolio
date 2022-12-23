@@ -17,7 +17,7 @@ const MONTHS = [
 ];
 
 @Pipe({ name: 'DateToString' })
-export class DateToString implements PipeTransform {
+export class DateToStringPipe implements PipeTransform {
     transform(value: Date | string): string {
         if (typeof value === 'string') {
             value = new Date(value);

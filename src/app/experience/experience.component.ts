@@ -2,18 +2,39 @@ import { Component } from '@angular/core';
 import { ResumeService } from '../service/resume.service';
 import { Experience } from './experience.entity';
 import { Sort } from '@angular/material/sort';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: ['./experience.component.scss'],
+  animations: [
+    trigger('cardFlip', [
+      state('default', style({
+        transform: 'none'
+      })),
+      state('flipped', style({
+        transform: 'rotateY(180deg)'
+      })),
+      transition('default => flipped', [
+        animate('400ms')
+      ]),
+      transition('flipped => default', [
+        animate('200ms')
+      ])
+    ])
+  ],
+
 })
 export class ExperienceComponent {
   experiences!: Experience[];
+  isFlipped!: boolean[];
 
   constructor(private resumeService: ResumeService) {
     this.resumeService.getExperience().subscribe((experience: Experience[]) => {
       this.experiences = experience;
+      this.isFlipped = new Array(this.experiences.length).fill(false);
+
     })
   }
 
@@ -35,8 +56,18 @@ export class ExperienceComponent {
         default: return 0;
       }
     });
-
   }
+
+
+  cardClicked(i: number) {
+    this.isFlipped[i] = !this.isFlipped[i];
+  }
+
+
+  isClicked(i: number) {
+    return this.isFlipped[i];
+  }
+
 }
 
 

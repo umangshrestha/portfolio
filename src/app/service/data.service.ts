@@ -101,6 +101,9 @@ export class DataService implements InMemoryDbService {
       location: "Banglore, India",
       startDate: new Date(2018, 2, 1),
       endDate: new Date(2018, 5, 1),
+      description: [ 
+        "Creating self driving car for monitoring WIFI parameters while roaming in mesh network.",
+      ],
     }, {
       id: 2,
       company: "Magal Healthcare",
@@ -108,6 +111,10 @@ export class DataService implements InMemoryDbService {
       location: "Banglore, India",
       startDate: new Date(2018, 6, 1),
       endDate: new Date(2019, 3, 1),
+      description: [
+        "Introduced custom ubuntu ISO with prebuilt dependency and heartbeat script for decreasing deployment time of test beds .",
+        "Automated e2e testing of android app using Appium, keyword driven test cases in Robot framework, and added pipeline in Jenkins.",
+      ],
     }, {
       id: 3,
       company: "Lifesignals Pvt. Ltd.",
@@ -115,6 +122,14 @@ export class DataService implements InMemoryDbService {
       location: "Banglore, India",
       startDate: new Date(2019, 4, 24),
       endDate: new Date(2022, 12, 15),
+      description: [
+        "Developed a web application using Django and Python to monitor the health of the patients using the data from the sensors.",
+        "Created scalable simulator capable of running 200+ independent simulations, each dynamically configurable in runtime via REST Api.",
+        "Implemented TLV parser in Golang for serialization of TLV encoded byte array to structs and JSON, and serialization of same.",
+        "Dockerized microservices for registering IoT devices and relaying data from local cluster to cental hub.",
+        "Ensured feature quality though unit testing, and debugged, maintained and modified Java based android app used for interacting with IOT devices.",
+        "Created ETL process to analyze logs and visualize trends utilizing Python, Pandas and Plotly.",
+      ]
     }, {
       id: 4,
       company: "University Of Windsor",
@@ -122,6 +137,11 @@ export class DataService implements InMemoryDbService {
       location: "Windsor, ON",
       startDate: new Date(2022, 8, 29),
       endDate: new Date(2023, 4, 29),
+      description: [
+        "Deployed Nest.js powered REST API for tracking of faculty requests and documented the same with Swagger AI.",
+        "Added authentication guards, JWT interceptors with refresh token and API service for Angular.",
+        "Supporting frontend development using Angular, Typescript, and Material UI.",
+      ]
     }
   ]
 

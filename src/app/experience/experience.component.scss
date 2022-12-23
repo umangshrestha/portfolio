@@ -1,31 +1,27 @@
-table {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px;
-    border-radius: 10px;
-    max-width: 1200px;
-    transition: all 0.3s ease-in-out;
+mat-tab-group {
+    max-width: 1600px;
+    width: 80%;
+}
 
-    &:hover {
-        transform: scale(1.05);
-    }
-
+mat-card-header {
+    align-items: center;
+    font-weight: 100;
+    font-size: 1.5rem;
+    padding: 0 20px;
+    margin: 0;
 }
 
 
-td,
-th {
-    width: auto;
-    border: 1px solid #ddd;
-    padding: 8px;
-    transition: all 0.3s ease-in-out;
-}
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
 
-tr:hover {
-    background-color: #ddd;
+li {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 0;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 0.00938em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
