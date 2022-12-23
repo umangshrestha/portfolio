@@ -25,7 +25,7 @@
         <fa-icon icon="briefcase" matListItemIcon></fa-icon>
         <span matListItemTitle>Experience</span>
       </mat-list-item>
-      <mat-list-item (click)="scroll(skills)">
+      <mat-list-item (click)="scroll(experience)">
         <fa-icon icon="tools" matListItemIcon></fa-icon>
         <span matListItemTitle>Skills</span>
       </mat-list-item>
@@ -41,29 +41,31 @@
 
   </mat-sidenav>
 
-  <mat-sidenav-content >
-    <main class="mat-elevation-z8">
-      <section #personalDetails>
-        <app-personal-details></app-personal-details>
-      </section>
-      <section #projects>
-        <app-projects></app-projects>
-      </section>
-      <section #education>
-        <app-education></app-education>
-      </section>
-      <section #home>
-        <h1>Home</h1>
-      </section>
+  <mat-sidenav-content>
+      <main class="mat-elevation-z8">
+        <section #personalDetails>
+          <app-personal-details></app-personal-details>
+        </section>
+        <section #projects>
+          <app-projects></app-projects>
+        </section>
+        <section #education>
+          <app-education></app-education>
+        </section>
+        <section #home>
+          <h1>Home</h1>
+        </section>
 
-      <section #experience>
-        <h1>Experience</h1>
-      </section>
-      <section #skills>
-        <h1>Skills</h1>
-      </section>
-    </main>
-    <footer class="mat-elevation-z8">
+        <section #experience>
+          <h1>Experience</h1>
+        </section>
+        <section #skills>
+          <app-skills></app-skills>
+        </section>
+      
+      </main>
+
+     <footer class="mat-elevation-z8">
       <a mat-button disabled>
         <mat-icon>copyright</mat-icon> 2022, <em>Umang Shrestha</em>
       </a>

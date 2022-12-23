@@ -15,6 +15,7 @@ import { faGithub, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-ico
 import { faBriefcase, faEnvelope, faCopy, faGraduationCap, faHome, faLink, faPhoneFlip, faProjectDiagram, faTools, faUser } from '@fortawesome/free-solid-svg-icons';
 import { ProjectsComponent } from './projects/projects.component';
 import { AIconBtnComponent } from './personal-details/a-icon-btn/a-icon-btn.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AIconBtnComponent } from './personal-details/a-icon-btn/a-icon-btn.comp
     PersonalDetailsComponent,
     ProjectsComponent,
     AIconBtnComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

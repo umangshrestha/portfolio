@@ -16,12 +16,14 @@ export class DataService implements InMemoryDbService {
       institute: "University of Windsor",
       program: "Master in Engineering (Co-op)",
       degree: "Electrical and Computer Engineering",
+      location: "Windsor, ON",
       year: 2023
     }, {
       id: 3,
       institute: "Rajiv Gandhi Insitiute of Technology",
       program: "Bachelor in Engineering",
       degree: "Biomedical Engineering",
+      location: "Banglore, India",
       year: 2018
     },
   ];

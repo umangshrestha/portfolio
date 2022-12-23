@@ -7,7 +7,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatRippleModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -24,7 +23,6 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatListModule,
     MatCardModule,
     MatTooltipModule,
-    MatRippleModule,
     ClipboardModule,
     MatExpansionModule,
     MatSnackBarModule,
