@@ -6,6 +6,7 @@ import { map } from 'rxjs';
 import { Project } from '../projects/projects.entity';
 import { PersonalDetails } from '../personal-details/personal-details.entity';
 import { Skills } from '../skills/skills.entity';
+import { Experience } from '../experience/experience.entity';
 
 @Injectable({
   providedIn: 'root'
@@ -36,5 +37,11 @@ export class ResumeService {
 
   getSkills() {
     return this.http.get<Skills>(ResumeService.URL + '/skills');
+  }
+
+
+  getExperience() {
+    return this.http.get<Experience[]>(ResumeService.URL + '/experience')
+      .pipe(map((event: Experience[]) => event.sort((a: Experience, b: Experience) => b.id - a.id)));
   }
 }

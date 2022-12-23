@@ -18,6 +18,7 @@ import { AIconBtnComponent } from './personal-details/a-icon-btn/a-icon-btn.comp
 import { SkillsComponent } from './skills/skills.component';
 import { TagsComponent } from './tags/tags.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { DateToString } from './shared/date.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { ExperienceComponent } from './experience/experience.component';
     AIconBtnComponent,
     SkillsComponent,
     ExperienceComponent,
-    TagsComponent
+    TagsComponent,
+
+    DateToString
   ],
   imports: [
     BrowserModule,

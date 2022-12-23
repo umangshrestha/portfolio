@@ -11,6 +11,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CdkTableModule } from '@angular/cdk/table';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [],
@@ -25,7 +26,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     ClipboardModule,
     MatSnackBarModule,
     CdkTableModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSortModule
   ]
 })
 export class MaterialModule { }

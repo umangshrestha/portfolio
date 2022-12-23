@@ -4,6 +4,7 @@ import { Education } from '../education/education.entity';
 import { PersonalDetails } from '../personal-details/personal-details.entity';
 import { Project } from '../projects/projects.entity';
 import { Skills } from '../skills/skills.entity';
+import { Experience } from '../experience/experience.entity';
 
 @Injectable({
   providedIn: 'root'
@@ -86,10 +87,44 @@ export class DataService implements InMemoryDbService {
     "Web Technologies": ["HTML", "CSS", "Bootstrap", "Angular", "React", "Node JS", "Nest JS", "Express JS", "Django", "Flask"],
     "Databases": ["PostgreSQL", "MongoDB", "Redis"],
     "DevOps": ["Docker", "Kubernetes", "Jenkins", "Github Actions", "AWS", "Azure"],
-    "Tools": ["Git", "Jira", "Postman", "Swagger", "VS Code", "PyCharm", "IntelliJ",  "DBeaver", "Insomnia"],
+    "Tools": ["Git", "Jira", "Postman", "Swagger", "VS Code", "PyCharm", "IntelliJ", "DBeaver", "Insomnia"],
     "Operating Systems": ["Linux", "Windows"],
     "Others": ["OOPS", "Data Structures", "Algorithms", "Design Patterns", "REST API", "Microservices", "Agile", "Scrum"]
   }
+
+
+  experience: Experience[] = [
+    {
+      id: 1,
+      company: "IMN Technologies",
+      designation: "Research Intern",
+      location: "Banglore, India",
+      startDate: new Date(2018, 2, 1),
+      endDate: new Date(2018, 5, 1),
+    }, {
+      id: 2,
+      company: "Magal Healthcare",
+      designation: "QA Engineer",
+      location: "Banglore, India",
+      startDate: new Date(2018, 6, 1),
+      endDate: new Date(2019, 3, 1),
+    }, {
+      id: 3,
+      company: "Lifesignals Pvt. Ltd.",
+      designation: "Software Developer",
+      location: "Banglore, India",
+      startDate: new Date(2019, 4, 24),
+      endDate: new Date(2022, 12, 15),
+    }, {
+      id: 4,
+      company: "University Of Windsor",
+      designation: "Co-op Intern",
+      location: "Windsor, ON",
+      startDate: new Date(2022, 8, 29),
+      endDate: new Date(2023, 4, 29),
+    }
+  ]
+
 
   createDb() {
     return {
@@ -98,6 +133,7 @@ export class DataService implements InMemoryDbService {
       projects: this.projects,
       personalDetails: this.personalDetails,
       skills: this.skills,
+      experience: this.experience
     }
   }
 

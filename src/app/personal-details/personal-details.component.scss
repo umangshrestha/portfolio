@@ -3,8 +3,13 @@
     width: 800px;
     position: relative;
     border-radius: 10px;
-    padding-top: 32px;
+    padding-top: 33px;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     &::before {
         content: "\2022 \2022 \2022";
