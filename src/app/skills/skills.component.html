@@ -1,0 +1,13 @@
+<div *ngFor="let skill of skillsKeys()">
+  <mat-card class="skill-card">
+    <mat-card-header>
+      <mat-card-title>{{skill}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="skill-list">
+          <li *ngFor="let subSkill of skills[skill]">
+            <span>{{subSkill}}</span>
+          </li>
+        </ul>
+    </mat-card-content>
+  </mat-card>

@@ -3,6 +3,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api'
 import { Education } from '../education/education.entity';
 import { PersonalDetails } from '../personal-details/personal-details.entity';
 import { Project } from '../projects/projects.entity';
+import { Skills } from '../skills/skills.entity';
 
 @Injectable({
   providedIn: 'root'
@@ -78,12 +79,23 @@ export class DataService implements InMemoryDbService {
       demoUrl: "https://nestflowapp.herokuapp.com/"
     }]
 
+  skills: Skills = {
+    "Programming Languages": ["Python", "Golang", "Typescript", "Javascript", "C", "C++", "Java"],
+    "Web Technologies": ["HTML", "CSS", "Bootstrap", "Angular", "React", "Node JS", "Nest JS", "Express JS", "Django", "Flask"],
+    "Databases": ["PostgreSQL", "MongoDB", "Redis"],
+    "DevOps": ["Docker", "Kubernetes", "Jenkins", "Github Actions", "AWS", "Azure"],
+    "Tools": ["Git", "Jira", "Postman", "Swagger", "VS Code", "PyCharm", "IntelliJ",  "DBeaver", "Insomnia"],
+    "Operating Systems": ["Linux", "Windows"],
+    "Others": ["OOPS", "Data Structures", "Algorithms", "Design Patterns", "REST API", "Microservices", "Agile", "Scrum"]
+  }
+
   createDb() {
     return {
       education: this.education,
       location: this.location,
       projects: this.projects,
-      personalDetails: this.personalDetails
+      personalDetails: this.personalDetails,
+      skills: this.skills,
     }
   }
 
