@@ -16,6 +16,8 @@ import { faBriefcase, faEnvelope, faCopy, faGraduationCap, faHome, faLink, faPho
 import { ProjectsComponent } from './projects/projects.component';
 import { AIconBtnComponent } from './personal-details/a-icon-btn/a-icon-btn.component';
 import { SkillsComponent } from './skills/skills.component';
+import { TagsComponent } from './tags/tags.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SkillsComponent } from './skills/skills.component';
     PersonalDetailsComponent,
     ProjectsComponent,
     AIconBtnComponent,
-    SkillsComponent
+    SkillsComponent,
+    ExperienceComponent,
+    TagsComponent
   ],
   imports: [
     BrowserModule,

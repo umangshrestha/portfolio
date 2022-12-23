@@ -18,6 +18,10 @@ export class SkillsComponent {
   }
 
 
-  skillsKeys = () => Object.keys(this.skills);
-  
+  skillsKeys(){
+    if (!this.skills) {
+      return [];
+    }
+    return Object.keys(this.skills);
+  }
 }

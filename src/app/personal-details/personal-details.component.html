@@ -1,6 +1,7 @@
+<h1>Personal Details</h1>
 <div class="container">
     <div class="outer mat-elevation-z8" *ngIf="detail">
-        <mat-card *ngIf="detail">
+        <mat-card>
             <img mat-card-image src="{{detail.image}}" alt="Photo of a {{detail.name}}">
             <mat-card-actions>
                 <a-icon-btn href="{{detail.github}}" [icon]="['fab', 'github']"></a-icon-btn>
@@ -21,36 +22,41 @@
                             <mat-icon>info</mat-icon>
                             <span>About</span>
                         </ng-template>
-                        <article>{{detail.description}}</article>
+                        <div class="fit">
+                            <article>{{detail.description}}</article>
+                        </div>
                     </mat-tab>
+
 
                     <mat-tab>
                         <ng-template mat-tab-label>
                             <mat-icon>phone</mat-icon>
                             <span>Contact</span>
                         </ng-template>
-                        <mat-list>
-                            <mat-list-item [cdkCopyToClipboard]="detail.phone" (click)="onCopy('Phone number')">
-                                <mat-icon matListItemIcon>phone</mat-icon>
-                                <span matListItemTitle>Phone</span>
-                                <span matListItemSubtitle>{{detail.phone}}</span>
+                        <div class="fit">
+                            <mat-list>
+                                <mat-list-item [cdkCopyToClipboard]="detail.phone" (click)="onCopy('Phone number')">
+                                    <mat-icon matListItemIcon>phone</mat-icon>
+                                    <span matListItemTitle>Phone</span>
+                                    <span matListItemSubtitle>{{detail.phone}}</span>
 
-                            </mat-list-item>
-                            <mat-list-item [cdkCopyToClipboard]="detail.email" (click)="onCopy('Email')">
-                                <mat-icon matListItemIcon>email</mat-icon>
-                                <span matListItemTitle>Email</span>
-                                <span matListItemSubtitle>{{detail.email}}</span>
-                            </mat-list-item>
-                            <mat-list-item [cdkCopyToClipboard]="detail.email" (click)="onCopy('Addres')">
-                                <mat-icon matListItemIcon>location_on</mat-icon>
-                                <span matListItemTitle>Location</span>
-                                <span matListItemSubtitle>{{detail.address}}</span>
-                            </mat-list-item>
-                        </mat-list>
+                                </mat-list-item>
+                                <mat-list-item [cdkCopyToClipboard]="detail.email" (click)="onCopy('Email')">
+                                    <mat-icon matListItemIcon>email</mat-icon>
+                                    <span matListItemTitle>Email</span>
+                                    <span matListItemSubtitle>{{detail.email}}</span>
+                                </mat-list-item>
+                                <mat-list-item [cdkCopyToClipboard]="detail.email" (click)="onCopy('Addres')">
+                                    <mat-icon matListItemIcon>location_on</mat-icon>
+                                    <span matListItemTitle>Location</span>
+                                    <span matListItemSubtitle>{{detail.address}}</span>
+                                </mat-list-item>
+                            </mat-list>
+                        </div>
                     </mat-tab>
                 </mat-tab-group>
             </mat-card-content>
-
+            <span class="spacer"></span>
         </mat-card>
     </div>
 </div>

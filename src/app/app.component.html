@@ -13,10 +13,6 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav opened class="mat-elevation-z8">
     <mat-nav-list>
-      <mat-list-item (click)="scroll(home)" routerLinkActive="active">
-        <fa-icon icon="home" matListItemIcon></fa-icon>
-        <span matListItemTitle>Home</span>
-      </mat-list-item>
       <mat-list-item (click)="scroll(personalDetails)">
         <fa-icon icon="user" matListItemIcon></fa-icon>
         <span matListItemTitle>Personal Details</span>
@@ -38,7 +34,7 @@
         <span matListItemTitle>Projects</span>
       </mat-list-item>
     </mat-nav-list>
-
+    <span class="spacer"></span>
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -46,21 +42,20 @@
         <section #personalDetails>
           <app-personal-details></app-personal-details>
         </section>
-        <section #projects>
-          <app-projects></app-projects>
-        </section>
-        <section #education>
-          <app-education></app-education>
-        </section>
-        <section #home>
-          <h1>Home</h1>
-        </section>
 
         <section #experience>
-          <h1>Experience</h1>
+          <app-experience></app-experience>
         </section>
         <section #skills>
           <app-skills></app-skills>
+        </section>
+
+        <section #education>
+          <app-education></app-education>
+        </section>
+
+        <section #projects>
+          <app-projects></app-projects>
         </section>
       
       </main>

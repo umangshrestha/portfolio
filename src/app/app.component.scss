@@ -8,85 +8,76 @@ mat-toolbar {
     height: 5vh;
     animation: ComeFromTop $annimation-duration linear;
     background: #002b5c;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding: 0 10px;
 
-    .spacer {
-        flex: 1 1 auto;
-    }
-}
 
-@keyframes ComeFromTop {
-    from {
-        transform: translateY(-60%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes ComeFromBottom {
-    from {
-        transform: translateY(60%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
 }
 
 mat-sidenav {
     border-right: none;
     min-width: 160px;
     height: calc(100vh - 6vh);
-    margin: 5px 0;
     border-radius: 0 10px 10px 0;
+
+    mat-list-item {
+        height: 5vh;
+        color: white;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+        &:nth-child(1) {
+            border-radius: 10px 10px 0 0;
+        }
+
+        &:nth-last-child(1) {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+}
+
+
+@keyframes ComeFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 mat-sidenav-content {
     height: 95vh;
 }
 
-@keyframes ComeFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes ZoomOut {
-    0% {
-        transform: translateX(10%);
-        transform: scale(0.9);
-    }
-
-    100% {
-        transform: translateX(0);
-        transform: scale(1);
-    }
-}
 
 section {
     min-height: fit-content;
     border-radius: 10px;
     margin: 5px 5px;
     padding: 32px;
-    animation: ZoomOut 0.5s ease-in-out;
+    animation: ComeFromTop $annimation-duration linear;
 }
+
 
 
 main {
     min-height: calc(100vh - 98px);
     border-radius: 10px;
     margin: 5px;
- 
+
 }
 
 footer {
-    max-height: fit-content; 
+    max-height: fit-content;
     text-align: center;
-    border-radius: 10px;
     margin: 5px 5px;
+    align-items: center;
+    height: 5vh;
+    animation: ComeFromTop $annimation-duration linear;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding: 0 10px;
+    color: white;
 }

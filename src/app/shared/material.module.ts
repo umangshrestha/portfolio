@@ -8,7 +8,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { CdkTableModule } from '@angular/cdk/table';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -24,7 +23,6 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatCardModule,
     MatTooltipModule,
     ClipboardModule,
-    MatExpansionModule,
     MatSnackBarModule,
     CdkTableModule,
     MatTabsModule

@@ -1,25 +1,24 @@
 <h1>Projects</h1>
-<div class="project-list">  
+<div class="container">
     <ng-container *ngFor="let project of projects">
-    <mat-card matRipple  class="project mat-elevation-z8">
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>{{project.name| uppercase}}</mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-card-content>{{project.description}}</mat-card-content>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{project.name}}</mat-card-title>
+            </mat-card-header>
+              <mat-card-content>
+                <article>{{project.description}}</article>
+                <app-tags [tags]="project.tags"></app-tags>
+            </mat-card-content>
 
-        </mat-expansion-panel>
+            <span class="spacer"></span>
 
-        <div class="tags-container">
-            <span *ngFor="let tags of project.tags">{{tags}}</span>
-        </div>
-        <span class="spacer"></span>
+            <mat-divider></mat-divider>
 
-        <mat-divider></mat-divider>
-        <mat-card-footer class="footer">
-            <a mat-button href="{{project.github}}">Github</a>
-            <a mat-button href="{{project.demoUrl}}" color="accent" [disabled]="!project.demoUrl">Demo</a>
-        </mat-card-footer>
-    </mat-card>
+            <mat-card-actions>
+                <a mat-button href="{{project.github}}">Github</a>
+                <a mat-button href="{{project.demoUrl}}" color="accent" [disabled]="!project.demoUrl">Demo</a>
+            </mat-card-actions>
+      
+        </mat-card>
     </ng-container>
 </div>

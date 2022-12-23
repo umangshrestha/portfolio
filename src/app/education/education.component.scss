@@ -2,24 +2,34 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 12px;
     width: 100%;
+    padding: 0 20px;
     max-width: 1200px;
-    padding: 0 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
 
     mat-card {
         border-left: 8px solid #1976D2;
-        border-radius: 10px;
-        width: 300px;
-        height: 400px;
-        padding: 32px 24px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        margin: 10px;
+        width: 400px;
+        
         transition: all 0.3s ease-in-out;
         &:hover {
             transform: scale(1.05);
         }
     }
 
-
+    mat-card-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 32px;
+    }
 
 }
+
+

@@ -20,3 +20,17 @@ fa-icon {
 .spacer {
     flex: 1 1 auto;
 }
+
+article {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    color: #333;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.00938em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

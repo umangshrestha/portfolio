@@ -4,14 +4,9 @@
         <mat-card class="skill-card">
             <mat-card-header>
                 <mat-card-title>{{skill}}</mat-card-title>
-                <mat-divider></mat-divider>
             </mat-card-header>
             <mat-card-content>
-                <ul>
-                    <li *ngFor="let skill of skills[skill]">
-                        <span>{{skill}}</span>
-                    </li>
-                </ul>
+                <app-tags [tags]="skills[skill]"></app-tags>
             </mat-card-content>
         </mat-card>
     </ng-container>
