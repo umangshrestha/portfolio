@@ -15,6 +15,7 @@ export class AppComponent {
   @ViewChild(MatSidenav, { static: true })
   sidenav!: MatSidenav;
 
+
   constructor(
     private titleService: Title,
     private meta: Meta,
@@ -34,10 +35,11 @@ export class AppComponent {
 
 
   ngOnInit() {
-    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+    this.observer.observe(['(max-width: 1000px)']).subscribe((res) => {
       if (res.matches) {
         this.sidenav.mode = 'over';
         this.sidenav.close();
+
       } else {
         this.sidenav.mode = 'side';
         this.sidenav.open();
