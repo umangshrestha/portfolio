@@ -39,7 +39,7 @@ export class DataService implements InMemoryDbService {
     id: 1,
     name: "Umang Shrestha",
     designation: "Software Developer",
-    image: "/assets/img_avatar.png",
+    image: "/assets/image.jpg",
     email: "umangshrestha09@gmail.com",
     phone: "+1 (226)961-1358",
     github: "https://github.com/umangshrestha/",

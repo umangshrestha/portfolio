@@ -53,6 +53,7 @@ mat-card {
     border-radius: 0;
 }
 
+
 li {
     display: flex;
     justify-content: flex-start;
@@ -61,9 +62,9 @@ li {
 
 
 img {
-    width: 400px;
-    height: 400px;
-    margin-right: 32px;
+    padding: 5px;
+    height: fit-content;
+    border-radius: 10px;
 }
 
 mat-card-header {

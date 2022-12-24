@@ -1,7 +1,7 @@
 <h1>Personal Details</h1>
 <div class="container">
     <div class="outer mat-elevation-z8" *ngIf="detail">
-        <mat-card>
+        <mat-card  class="card1">
             <img mat-card-image src="{{detail.image}}" alt="Photo of a {{detail.name}}">
             <mat-card-actions>
                 <a-icon-btn href="{{detail.github}}" [icon]="['fab', 'github']"></a-icon-btn>
