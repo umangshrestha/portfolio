@@ -88,3 +88,10 @@ footer {
     padding: 0 10px;
     color: white;
 }
+
+
+@media (max-width: 600px) {
+    #downloadWord {
+        display: none;
+    }
+}
