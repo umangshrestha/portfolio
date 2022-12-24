@@ -5,6 +5,7 @@ import { PersonalDetails } from '../personal-details/personal-details.entity';
 import { Project } from '../projects/projects.entity';
 import { Skills } from '../skills/skills.entity';
 import { Experience } from '../experience/experience.entity';
+import { faAngular, faDocker, faGithub, faGolang, faJava, faJenkins, faJira, faJs, faLinux, faPython, faReact, faWindows } from '@fortawesome/free-brands-svg-icons';
 
 @Injectable({
   providedIn: 'root'
@@ -83,14 +84,107 @@ export class DataService implements InMemoryDbService {
     }]
 
   skills: Skills = {
-    "Programming Languages": ["Python", "Golang", "Typescript", "Javascript", "C", "C++", "Java"],
-    "Web Technologies": ["HTML", "CSS", "Bootstrap", "Angular", "React", "Node JS", "Nest JS", "Express JS", "Django", "Flask"],
-    "Databases": ["PostgreSQL", "MongoDB", "Redis"],
-    "DevOps": ["Docker", "Kubernetes", "Jenkins", "Github Actions", "AWS", "Azure"],
-    "Tools": ["Git", "Jira", "Postman", "Swagger", "VS Code", "PyCharm", "IntelliJ", "DBeaver", "Insomnia"],
-    "Operating Systems": ["Linux", "Windows"],
-    "Others": ["OOPS", "Data Structures", "Algorithms", "Design Patterns", "REST API", "Microservices", "Agile", "Scrum"]
+    "Programming Languages": [
+      {
+        name: "Python",
+        image: "/assets/skills/python.svg",
+      }, {
+        name: "Golang",
+        image: "/assets/skills/go.svg",
+      }, {
+        name: "Typescript",
+        image: "/assets/skills/typescript.svg",
+      }, {
+        name: "Javascript",
+        image: "/assets/skills/js.svg",
+      }, {
+        name: "Java",
+        image: "/assets/skills/java.svg",
+      }, {
+        name: "Html",
+        image: "/assets/skills/html.svg",
+      }, {
+        name: "CSS",
+        image: "/assets/skills/css.svg",
+      }
+    ],
+    "Frameworks": [{
+      name: "Node",
+      image: "/assets/skills/node.svg",
+    },
+    {
+      name: "Angular",
+      image: "/assets/skills/angular.svg",
+    }, {
+      name: "React",
+      image: "/assets/skills/react.svg",
+    }, {
+      name: "NestJS",
+      image: "/assets/skills/nestjs.svg",
+    }, {
+      name: "NextJS",
+      image: "/assets/skills/nextjs.svg",
+    }, {
+      name: "Express",
+      image: "/assets/skills/express.svg",
+    }, {
+      name: "Flask",
+      image: "/assets/skills/flask.svg",
+    }, {
+      name: "Django",
+      image: "/assets/skills/django.svg",
+    }],
+    "Tools": [{
+      name: "GitHub",
+      image: "/assets/skills/github.svg",
+    }, {
+      name: "Bitbucket",
+      image: "/assets/skills/bitbucket.svg",
+    }, {
+      name: "Jira",
+      image: "/assets/skills/jira.svg",
+    }, {
+      name: "Docker",
+      image: "/assets/skills/docker.svg",
+    }, {
+      name: "Kubernetes",
+      image: "/assets/skills/kubernetes.svg",
+    }, {
+      name: "Jenkins",
+      image: "/assets/skills/jenkins.svg",
+    }],
+    "Operating Systems": [{
+      name: "Linux",
+      image: "/assets/skills/linux.svg",
+    }, {
+      name: "Windows",
+      image: "/assets/skills/windows.svg",
+    }],
+    "Databases": [{
+      name: "PostgreSQL",
+      image: "/assets/skills/postgresql.svg",
+    }, {
+      name: "MongoDB",
+      image: "/assets/skills/mongodb.svg",
+    }, {
+      name: "Redis",
+      image: "/assets/skills/redis.svg",
+    }],
+    "Cloud": [{
+      name: "Azure",
+      image: "/assets/skills/azure.svg",
+    }, {
+      name: "AWS",
+      image: "/assets/skills/aws.svg",
+    }, {
+      name: "Heroku",
+      image: "/assets/skills/heroku.svg",
+    }, {
+      name: "Vercel",
+      image: "/assets/skills/vercel.svg",
+    }]
   }
+
 
 
   experience: Experience[] = [
@@ -101,7 +195,7 @@ export class DataService implements InMemoryDbService {
       location: "Banglore, India",
       startDate: new Date(2018, 2, 1),
       endDate: new Date(2018, 5, 1),
-      description: [ 
+      description: [
         "Creating self driving car for monitoring WIFI parameters while roaming in mesh network.",
       ],
     }, {

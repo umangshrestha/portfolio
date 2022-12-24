@@ -1,3 +1,7 @@
+
 export interface Skills {
-    [key: string]: string[];
+    [key: string]: {
+        name: string,
+        image?: string
+    }[];
 }

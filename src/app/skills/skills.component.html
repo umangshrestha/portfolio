@@ -1,13 +1,15 @@
 <h1>Skills</h1>
 <div class="container">
-    <ng-container *ngFor="let skill of skillsKeys()">
-        <mat-card class="skill-card">
-            <mat-card-header>
-                <mat-card-title>{{skill}}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-tags [tags]="skills[skill]"></app-tags>
-            </mat-card-content>
-        </mat-card>
-    </ng-container>
+    <div class="skill-card" *ngFor="let skill of skillsKeys()">
+        <h2>{{skill}}</h2>
+        <div class="outer">
+            <ng-container *ngFor="let subSkill of skills[skill]">
+                <div class="card">
+                    <img matListItemAvatar src="{{subSkill.image}}" alt="logo of {{subSkill.name}}" />
+                    <span matListItemTitle>{{subSkill.name}}</span>
+                </div>
+            </ng-container>
+        </div>
+
+    </div>
 </div>
