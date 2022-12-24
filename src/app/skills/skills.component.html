@@ -5,7 +5,7 @@
         <div class="outer">
             <ng-container *ngFor="let subSkill of skills[skill]">
                 <div class="card">
-                    <img matListItemAvatar src="{{subSkill.image}}" alt="logo of {{subSkill.name}}" />
+                    <img matListItemAvatar lazyLoad="{{subSkill.image}}" alt="logo of {{subSkill.name}}"/>
                     <span matListItemTitle>{{subSkill.name}}</span>
                 </div>
             </ng-container>

@@ -22,6 +22,7 @@ import { DateToStringPipe } from './shared/pipe/date.pipe';
 import { JoinPipe } from './shared/pipe/join.pipe';
 import { HttpNetworkInterceptor } from './shared/interceptor/http.interceptor';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image'; 
 
 @NgModule({
   declarations: [
@@ -34,7 +35,6 @@ import { LoadingComponent } from './shared/loading/loading.component';
     ExperienceComponent,
     TagsComponent,
     LoadingComponent,
-
     DateToStringPipe,
     JoinPipe,
 
@@ -46,6 +46,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
     MaterialModule,
     HttpClientModule,
     FontAwesomeModule,
+    LazyLoadImageModule,
     InMemoryWebApiModule.forRoot(DataService)
   ],
   providers: [{
