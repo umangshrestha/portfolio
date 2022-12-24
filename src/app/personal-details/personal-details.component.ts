@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
-import { ResumeService } from '../service/resume.service';
+import { ResumeService } from '../shared/service/resume.service';
 import { PersonalDetails } from './personal-details.entity';
 
 @Component({
@@ -15,7 +15,7 @@ export class PersonalDetailsComponent {
 
   constructor(
     private resumeService: ResumeService,
-    private snackBar: MatSnackBar) {}
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getPersonalDetails();

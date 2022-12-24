@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Education } from '../education/education.entity';
+import { Education } from '../../education/education.entity';
 import { map } from 'rxjs';
 // import { Address } from '../contact/contact.entity';
-import { Project } from '../projects/projects.entity';
-import { PersonalDetails } from '../personal-details/personal-details.entity';
-import { Skills } from '../skills/skills.entity';
-import { Experience } from '../experience/experience.entity';
+import { Project } from '../../projects/projects.entity';
+import { PersonalDetails } from '../../personal-details/personal-details.entity';
+import { Skills } from '../../skills/skills.entity';
+import { Experience } from   '../../experience/experience.entity';
 
 @Injectable({
   providedIn: 'root'

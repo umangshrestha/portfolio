@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ResumeService } from '../service/resume.service';
+import { ResumeService } from '../shared/service/resume.service';
 import { Education } from './education.entity';
 
 @Component({

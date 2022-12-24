@@ -6,13 +6,20 @@ mat-toolbar {
     align-items: center;
     color: white;
     height: 5vh;
-    animation: ComeFromTop $annimation-duration linear;
     background-color: #002b5c;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     padding: 0 10px;
+    animation: ComeFromTop $annimation-duration linear;
+}
 
-
+@keyframes ComeFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 mat-sidenav {
@@ -36,20 +43,22 @@ mat-sidenav {
     }
 }
 
-
-@keyframes ComeFromTop {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
 mat-sidenav-content {
     height: 95vh;
+    animation: ZoomFromCenter $annimation-duration linear;
+
 }
+
+
+@keyframes ZoomFromCenter {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 
 section {
@@ -57,7 +66,6 @@ section {
     border-radius: 10px;
     margin: 5px 5px;
     padding: 32px;
-    animation: ComeFromTop $annimation-duration linear;
 }
 
 

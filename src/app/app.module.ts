@@ -7,19 +7,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { EducationComponent } from './education/education.component';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { DataService } from './service/data.service';
-import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './shared/service/data.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { faGithub, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { faBriefcase, faEnvelope, faCopy, faGraduationCap, faHome, faLink, faPhoneFlip, faProjectDiagram, faTools, faUser } from '@fortawesome/free-solid-svg-icons';
 import { ProjectsComponent } from './projects/projects.component';
-import { AIconBtnComponent } from './personal-details/a-icon-btn/a-icon-btn.component';
+import { AIconBtnComponent } from './shared/a-icon-btn/a-icon-btn.component';
 import { SkillsComponent } from './skills/skills.component';
 import { TagsComponent } from './shared/tags/tags.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { DateToStringPipe } from './shared/pipe/date.pipe';
 import { JoinPipe } from './shared/pipe/join.pipe';
+import { HttpNetworkInterceptor } from './shared/interceptor/http.interceptor';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { JoinPipe } from './shared/pipe/join.pipe';
     SkillsComponent,
     ExperienceComponent,
     TagsComponent,
+    LoadingComponent,
 
     DateToStringPipe,
     JoinPipe,
@@ -45,7 +48,11 @@ import { JoinPipe } from './shared/pipe/join.pipe';
     FontAwesomeModule,
     InMemoryWebApiModule.forRoot(DataService)
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpNetworkInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

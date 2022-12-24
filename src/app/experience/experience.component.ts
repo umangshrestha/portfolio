@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ResumeService } from '../service/resume.service';
+import { ResumeService } from '../shared/service/resume.service';
 import { Experience } from './experience.entity';
 import { Sort } from '@angular/material/sort';
 import { animate, state, style, transition, trigger } from '@angular/animations';

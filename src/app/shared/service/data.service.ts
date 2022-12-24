@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api'
-import { Education } from '../education/education.entity';
-import { PersonalDetails } from '../personal-details/personal-details.entity';
-import { Project } from '../projects/projects.entity';
-import { Skills } from '../skills/skills.entity';
-import { Experience } from '../experience/experience.entity';
-import { faAngular, faDocker, faGithub, faGolang, faJava, faJenkins, faJira, faJs, faLinux, faPython, faReact, faWindows } from '@fortawesome/free-brands-svg-icons';
+import { Education } from '../../education/education.entity';
+import { PersonalDetails } from '../../personal-details/personal-details.entity';
+import { Project } from '../../projects/projects.entity';
+import { Skills } from '../../skills/skills.entity';
+import { Experience } from '../../experience/experience.entity';
 
 @Injectable({
   providedIn: 'root'
@@ -46,7 +45,7 @@ export class DataService implements InMemoryDbService {
     github: "https://github.com/umangshrestha/",
     linkedin: "https://www.linkedin.com/in/umangshrestha/",
     medium: "https://umangshrestha09.medium.com/",
-    description: "I am a software developer with 2 years of experience in developing, maintaining and automating software solutions using various programming languagers like Python, Node JS and Golang. I am a quick learner and I am always eager to learn new technologies. I am a team player and I am always ready to help my team members.",
+    description: "I am a software developer with 4 years of experience in developing, maintaining and automating software solutions using various programming languagers like Python, Node JS and Golang. I am a quick learner and I am always eager to learn new technologies. I am a team player and I am always ready to help my team members.",
     address: "511 Pelissier St, Windsor, ON N9A 4L2"
   }
 
