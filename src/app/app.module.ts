@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,7 +22,8 @@ import { DateToStringPipe } from './shared/pipe/date.pipe';
 import { JoinPipe } from './shared/pipe/join.pipe';
 import { HttpNetworkInterceptor } from './shared/interceptor/http.interceptor';
 import { LoadingComponent } from './shared/loading/loading.component';
-import { LazyLoadImageModule } from 'ng-lazyload-image'; 
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { ServiceWorkerModule } from '@angular/service-worker'; 
 
 @NgModule({
   declarations: [
@@ -47,7 +48,13 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     HttpClientModule,
     FontAwesomeModule,
     LazyLoadImageModule,
-    InMemoryWebApiModule.forRoot(DataService)
+    InMemoryWebApiModule.forRoot(DataService),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
